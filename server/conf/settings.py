@@ -26,6 +26,7 @@ put secret game- or server-specific settings in secret_settings.py.
 
 # Use the defaults from Evennia unless explicitly overridden
 from evennia.settings_default import *
+from evennia.contrib.base_systems import color_markups
 
 ######################################################################
 # Evennia base server config
@@ -34,6 +35,13 @@ from evennia.settings_default import *
 # This is the name of your game. Make it catchy!
 SERVERNAME = "The Beckoning - Athens by Night"
 TELNET_PORTS = [6666]
+
+COLOR_ANSI_EXTRA_MAP = color_markups.MUX_COLOR_ANSI_EXTRA_MAP
+COLOR_XTERM256_EXTRA_FG = color_markups.MUX_COLOR_XTERM256_EXTRA_FG
+COLOR_XTERM256_EXTRA_BG = color_markups.MUX_COLOR_XTERM256_EXTRA_BG
+COLOR_XTERM256_EXTRA_GFG = color_markups.MUX_COLOR_XTERM256_EXTRA_GFG
+COLOR_XTERM256_EXTRA_GBG = color_markups.MUX_COLOR_XTERM256_EXTRA_GBG
+COLOR_ANSI_XTERM256_BRIGHT_BG_EXTRA_MAP = color_markups.MUX_COLOR_ANSI_XTERM256_BRIGHT_BG_EXTRA_MAP
 
 # Disable the Javascript webclient
 WEBCLIENT_ENABLED = False
