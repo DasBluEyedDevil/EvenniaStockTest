@@ -33,7 +33,7 @@ from evennia.settings_default import *
 
 # This is the name of your game. Make it catchy!
 SERVERNAME = "The Beckoning - Athens by Night"
-
+TELNET_PORTS = [6666]
 
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
