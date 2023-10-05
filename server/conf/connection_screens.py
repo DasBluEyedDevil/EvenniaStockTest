@@ -25,16 +25,54 @@ from django.conf import settings
 from evennia import utils
 
 CONNECTION_SCREEN = """
-|b==============================================================|n
- Welcome to |g{}|n, version {}!
 
- If you have an existing account, connect to it by typing:
-      |wconnect <username> <password>|n
- If you need to create an account, type (without the <>'s):
-      |wcreate <username> <password>|n
+========================                                       
+=        ==  ===========                                       
+====  =====  ===========                                       
+====  =====  ===========                                       
+====  =====  ======   ==                                       
+====  =====    ===  =  =                                       
+====  =====  =  ==     =                                       
+====  =====  =  ==  ====                                       
+====  =====  =  ==  =  =                                       
+====  =====  =  ===   ==                                       
+========================                                       
+===============================================================
+=      ==================  ====================================
+=  ===  =================  ====================================
+=  ====  ================  ====================================
+=  ===  ====   ====   ===  =  ===   ===  = ===  ==  = ====   ==
+=      ====  =  ==  =  ==    ===     ==     ======     ==  =  =
+=  ===  ===     ==  =====   ====  =  ==  =  ==  ==  =  ===    =
+=  ====  ==  =====  =====    ===  =  ==  =  ==  ==  =  =====  =
+=  ===  ===  =  ==  =  ==  =  ==  =  ==  =  ==  ==  =  ==  =  =
+=      =====   ====   ===  =  ===   ===  =  ==  ==  =  ===   ==
+===============================================================
+  ############################ ########### ######### ########      
+ ###   #####    ######       ####       #####     #####    ###     
+ ###     ###     ####        ###        #####    #####    ###      
+  ##     ####     ###        ###        ####     ####     ###      
+  ###    #####    ####       ####      #####    #####    ###       
+   ###   ########## ##################### ###########   ###        
+    ###  ###                                      ###  ####        
+     ### ###                                      ### ###          
+      #######                                    #######           
+        #####                                    ######            
+         #####                                  #####              
+            ###                                ####                
+              ##                              ##                   
 
- If you have spaces in your username, enclose it in quotes.
- Enter |whelp|n for more info. |wlook|n will re-show this screen.
-|b==============================================================|n""".format(
-    settings.SERVERNAME, utils.get_evennia_version("short")
+    Athens by Night - A World of Darkness MUSH                                                                                             
+
+    To connect, type '|wconnect <username> <password>|n'
+    to create,  type '|wcreate  <username> <password>|n'
+
+    If you have spaces in your username, enclose it in quotes.
+  
+    Enter |whelp|n for more info.
+
+    WoD Code Created by lcanady
+    Modifications by Devil, Kaos, and Nitro
+    Powered By Evennia v{}""".format(
+    utils.get_evennia_version("short")
 )
