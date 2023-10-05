@@ -35,6 +35,10 @@ from evennia.settings_default import *
 SERVERNAME = "The Beckoning - Athens by Night"
 TELNET_PORTS = [6666]
 
+# Disable the Javascript webclient
+WEBCLIENT_ENABLED = False
+# Disable the website altogether
+WEBSERVER_ENABLED = False
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
