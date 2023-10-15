@@ -36,7 +36,6 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         # any commands you add below will overload the default ones.
         #
 
-
 class AccountCmdSet(default_cmds.AccountCmdSet):
     """
     This is the cmdset available to the Account at all times. It is
@@ -96,7 +95,15 @@ class SessionCmdSet(default_cmds.SessionCmdSet):
         # any commands you add below will overload the default ones.
         #
 
-
-
+class CustomCmdSet(default_cmds.StatusCmdSet):
+    def at_cmdset_creation(self):
+        super().at_cmdset_creation()
+        self.add(CmdGrantStatus())
+        self.add(CmdRevokeStatus())
+        self.add(CmdSetStatus())
+        self.add(CmdSetAge())
+        self.add(CmdSetTitle())
+        self.add(CmdAdjustStatus())
+        self.add(CmdViewStatus())
 
 
