@@ -15,7 +15,7 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 """
 
 from evennia import default_cmds
-from contrib.muxcommand import MuxCommand
+
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -96,19 +96,6 @@ class SessionCmdSet(default_cmds.SessionCmdSet):
         # any commands you add below will overload the default ones.
         #
 
-class CommandSet(default_cmds.MuxCommand):
-    def at_cmdset_creation(self):
-        super().at_cmdset_creation()
-        self.add(CmdGrantStatus())
-        self.add(CmdRevokeStatus())
 
-class CustomCommandSet(default_cmds.MuxCommand):
-    def at_cmdset_creation(self):
-        super().at_cmdset_creation()
-        self.add(CmdSetStatus())
-        self.add(CmdSetAge())
-        self.add(CmdSetTitle())
-        self.add(CmdAdjustStatus())
-        self.add(CmdViewStatus())
 
 
