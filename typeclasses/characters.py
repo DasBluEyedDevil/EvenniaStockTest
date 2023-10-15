@@ -32,6 +32,5 @@ class Character(ObjectParent, DefaultCharacter):
     at_post_puppet - Echoes "AccountName has entered the game" to the room.
 
     """
-    cmdset = "commands.Custom_Cmdsets.Camarilla_code"
-    cmdset = "commands.Custom_Cmdsets.Status_code"
+
     pass
