@@ -1,5 +1,7 @@
 from evennia import Command
 from evennia import DefaultCharacter
+from evennia.contrib.muxcommand import MuxCommand
+
 
 # Define the status traits or titles
 STATUS_TRAITS = ["Acknowledged", "Confirmed", "Established", "Privileged", "Honored", "Disgraced"]
