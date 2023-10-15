@@ -1,7 +1,7 @@
 from evennia import default_cmds
 from .status_cmds import CmdGrantStatus, CmdRevokeStatus, CmdSetStatus, CmdSetAge, CmdSetTitle, CmdAdjustStatus, CmdViewStatus
 
-class StatusCmdSet(StatusCmdSet):
+class CustomCmdSet(StatusCmdSet):
     def at_cmdset_creation(self):
         super().at_cmdset_creation()
         self.add(CmdGrantStatus())
