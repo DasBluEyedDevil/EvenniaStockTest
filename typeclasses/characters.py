@@ -12,7 +12,7 @@ from .objects import ObjectParent
 from .commands.statuscmdset import StatusCmdSet
 
 class Character(ObjectParent, DefaultCharacter):
-    cmdset = StatusCmdSets
+    cmdset = StatusCmdSet
     """
     The Character defaults to reimplementing some of base Object's hook methods with the
     following functionality:
