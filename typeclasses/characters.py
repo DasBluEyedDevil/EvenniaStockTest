@@ -9,7 +9,7 @@ creation commands.
 """
 from evennia.objects.objects import DefaultCharacter
 from .objects import ObjectParent
-from mygame.commands.StatusCmdSet import StatusCmdSet
+from .root.MudDev.mygame.commands.StatusCmdSet import StatusCmdSet
 
 class Character(ObjectParent, DefaultCharacter):
     cmdset = StatusCmdSet
