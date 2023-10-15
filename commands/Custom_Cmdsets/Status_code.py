@@ -7,6 +7,8 @@
 #@viewstatus (to see the status board)
 from evennia import Command
 from evennia.utils import evtable
+from evennia.contrib.muxcommand import MuxCommand
+
 
 # Define age categories
 AGES = ["Fledgling", "Neonate", "Ancilla", "Elder"]
