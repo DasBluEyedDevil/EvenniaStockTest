@@ -2,6 +2,15 @@ from evennia import Command
 from evennia import DefaultCharacter
 from evennia.utils import evtable
 from evennia.commands.default.muxcommand import MuxCommand
+from .status_cmds import (
+    CmdGrantStatus,
+    CmdRevokeStatus,
+    CmdSetStatus,
+    CmdSetAge,
+    CmdSetTitle,
+    CmdAdjustStatus,
+    CmdViewStatus,
+)
 
 # Define the status traits or titles
 STATUS_TRAITS = ["Acknowledged", "Confirmed", "Established", "Privileged", "Honored", "Disgraced"]
@@ -140,3 +149,17 @@ class CmdViewStatus(Command):
                 table.add_row(name, age, title, str(points))
         self.caller.msg(str(table))
 
+class StaffStatus(default_cmds.MuxCommandSet):
+    def at_cmdset_creation(self):
+        super().at_cmdset_creation()
+        self.add(CmdGrantStatus())
+        self.add(CmdRevokeStatus())
+
+class PlayerStatus(default_cmds.MuxCommandSet):
+    def at_cmdset_creation(self):
+        super().at_cmdset_creation()
+        self.add(CmdSetStatus())
+        self.add(CmdSetAge())
+        self.add(CmdSetTitle())
+        self.add(CmdAdjustStatus())
+        self.add(CmdViewStatus())
