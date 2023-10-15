@@ -10,7 +10,7 @@ creation commands.
 from evennia.objects.objects import DefaultCharacter
 
 from .objects import ObjectParent
-from .commands.status_cmdset import Status_CmdSet
+from .commands.status_cmdset import Status_CmdSets
 
 class Character(ObjectParent, DefaultCharacter):
     """
