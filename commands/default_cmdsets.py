@@ -96,13 +96,13 @@ class SessionCmdSet(default_cmds.SessionCmdSet):
         # any commands you add below will overload the default ones.
         #
 
-class CommandSet(default_cmds.MuxCommandSet):
+class CommandSet(default_cmds.MuxCommand):
     def at_cmdset_creation(self):
         super().at_cmdset_creation()
         self.add(CmdGrantStatus())
         self.add(CmdRevokeStatus())
 
-class CustomCommandSet(default_cmds.MuxCommandSet):
+class CustomCommandSet(default_cmds.MuxCommand):
     def at_cmdset_creation(self):
         super().at_cmdset_creation()
         self.add(CmdSetStatus())
