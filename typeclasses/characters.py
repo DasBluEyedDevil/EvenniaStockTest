@@ -9,10 +9,8 @@ creation commands.
 """
 from evennia.objects.objects import DefaultCharacter
 from .objects import ObjectParent
-from commands.statuscmdset import StatusCmdSet
 
 class Character(ObjectParent, DefaultCharacter):
-    cmdset = StatusCmdSet
     """
     The Character defaults to reimplementing some of base Object's hook methods with the
     following functionality:
